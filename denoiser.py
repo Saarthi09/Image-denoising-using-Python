@@ -35,3 +35,20 @@ def pca_denoise(image, num_components, axis=0):
         reconstructed = reconstructed.T
 
     return np.clip(reconstructed, 0, 255)
+
+denoised_img = pca_denoise(img_array, num_components=50)
+
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 2, 1)
+plt.title("Before")
+plt.imshow(img_array, cmap='gray')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.title("After")
+plt.imshow(denoised_img, cmap='gray')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
