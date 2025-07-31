@@ -47,9 +47,10 @@ plt.title("Before")
 plt.imshow(img_array, cmap='gray') #this will display in grayscale 
 plt.axis("off")
 
+#now we display the denoised image
 plt.subplot(1,2,2)
 plt.title("After")
-plt.imshow(denoised_img, cmap='gray')
+plt.imshow(denoised_img, cmap='gray')#puts in grayscale
 plt.axis("off")
 
 plt.tight_layout()
